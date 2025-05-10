@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: hsl(243, 23%, 18%); /* space-cadet color from main page */
+    color: hsl(240, 10%, 70%); 
+}
+
+header {
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 0 0 20px 20px;
+    background-color: hsl(263, 100%, 19%); 
+    
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    background-color: hsl(225, 24%, 27%); /* independence from main page */
+    color: hsl(0, 0%, 100%);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #1e587e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-github {
+    background-color: #2c3e50;
+}
+
+.btn-github:hover {
+    background-color: #1a252f;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-item {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    background-color: hsl(222, 88%, 55%); /* bluetiful from main page */
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: hsl(254, 7%, 65%);
+}
+
+@media (max-width: 768px) {
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .btn {
+        text-align: center;
+    }
+}

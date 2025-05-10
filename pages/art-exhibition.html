@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Art Exhibition | Portfolyo</title>
+    <link rel="stylesheet" href="../assets/css/ocr-style.css">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .image-container img {
+            max-width: 45%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .image-container img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Art Exhibition Uygulaması</h1>
+        <p>Bir sanat ve sanat edebiyatı uygulaması</p>
+    </header>
+    
+    <main>
+        <div class="project-container">
+            <div class="image-container">
+                <img src="https://raw.githubusercontent.com/poqob/art_exhibition/master/screenshots/main.png" alt="Art Exhibition Uygulaması Görüntüsü">
+                <img src="https://raw.githubusercontent.com/poqob/art_exhibition/master/screenshots/museums_pageview_debug.png" alt="Müzeler Sayfası Görünümü">
+            </div>
+            
+            <div class="project-details">
+                <section>
+                    <h2>Proje Hakkında</h2>
+                    <p>Art Exhibition, sanat ve sanat edebiyatına odaklanan kapsamlı bir mobil uygulamadır. Kullanıcılar müzeleri, sanat eserlerini ve sanatçıları keşfedebilir, içerikleri kaydedebilir ve uygulama ayarlarını özelleştirebilir.</p>
+                    <p>Flutter ile geliştirilen bu uygulama, sanat tutkunları için modern ve kullanıcı dostu bir arayüz sunmaktadır.</p>
+                </section>
+                
+                <section>
+                    <h2>Özellikler</h2>
+                    <ul>
+                        <li>Müze katalogları (grid ve sayfa görünümleri)</li>
+                        <li>Sanat eserleri koleksiyonu</li>
+                        <li>Sanatçı profilleri ve bilgileri</li>
+                        <li>İçerikleri kaydetme ve favorilere ekleme</li>
+                        <li>Hesap ve uygulama ayarları</li>
+                        <li>Kullanıcı dostu giriş ve kayıt sistemi</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Kullanılan Teknolojiler</h2>
+                    <div class="tech-stack">
+                        <span class="tech-item">Dart</span>
+                        <span class="tech-item">Flutter</span>
+                        <span class="tech-item">C++</span>
+                        <span class="tech-item">CMake</span>
+                        <span class="tech-item">PostgreSQL</span>
+                    </div>
+                </section>
+                
+                <div class="project-links">
+                    <a href="https://github.com/poqob/art_exhibition?tab=readme-ov-file" class="btn btn-github" target="_blank">GitHub'da Görüntüle</a>
+                    <a href="../index.html" class="btn">Portfolyoya Dön</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Portfolyo. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

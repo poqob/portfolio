@@ -365,7 +365,10 @@ body {
 \*-----------------------------------*/
 
 .abs-img,
-.abs-icon { display: none; }
+.abs-icon { 
+  display: block; /* none yerine block kullanıyoruz */
+  position: absolute; /* pozisyon için absolute gerekli */
+}
 
 .about { padding-block-start: 120px; }
 
@@ -373,6 +376,7 @@ body {
   background-color: var(--independence);
   border-radius: var(--radius-10);
   margin-block-end: 30px;
+  position: relative; /* banner'ı relative yaparak içindeki absolute konumlandırmayı etkinleştiriyoruz */
 }
 
 .about-banner > .img-cover { border-radius: inherit; }
@@ -380,6 +384,70 @@ body {
 .about :is(.section-title, .section-subtitle, .section-text) { text-align: left; }
 
 .about :is(.section-title, .section-text) { margin-block-end: 30px; }
+
+/* Mobil cihazlar için açılı görünüm ayarları */
+.abs-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: inherit;
+  bottom: -50px;
+  left: -30px;
+}
+
+.abs-icon {
+  font-size: 3rem;
+  padding: 10px;
+  border-radius: inherit;
+}
+
+.abs-icon-1 {
+  top: 20px;
+  left: -40px;
+  background-color: var(--bluetiful);
+}
+
+.abs-icon-2 {
+  top: -20px;
+  right: -20px;
+  background-color: var(--gold-web-golden);
+}
+
+.abs-icon-3 {
+  bottom: -20px;
+  left: 120px;
+  background-color: var(--rufous);
+}
+
+/* Büyük ekranlar için medya sorgusu içinde boyutları ve konumları ayarlayabiliriz */
+@media (min-width: 992px) {
+  .abs-img {
+    width: 250px;
+    height: 250px;
+    bottom: -150px;
+    left: -100px;
+  }
+
+  .abs-icon {
+    font-size: 5rem;
+    padding: 20px;
+  }
+
+  .abs-icon-1 {
+    top: 50px;
+    left: -120px;
+  }
+
+  .abs-icon-2 {
+    top: -40px;
+    right: -40px;
+  }
+
+  .abs-icon-3 {
+    bottom: -40px;
+    left: 250px;
+  }
+}
 
 
 
@@ -411,7 +479,8 @@ body {
   transition: var(--transition-2);
 }
 
-.portfolio-list > li:nth-child(even) .card-content { margin-inline-start: auto; }
+/* Bu satırı yorum satırına dönüştürün veya tamamen silin */
+/* .portfolio-list > li:nth-child(even) .card-content { margin-inline-start: auto; } */
 
 .portfolio-card .card-subtitle {
   color: var(--orange-soda);
@@ -715,7 +784,7 @@ textarea.contact-input {
    * PORTFOLIO
    */
 
-  .portfolio-list li:nth-child(even) .card-content { margin-inline-start: 50%; }
+  /* .portfolio-list li:nth-child(even) .card-content { margin-inline-start: 50%; } */
 
 }
 
@@ -1055,4 +1124,64 @@ textarea.contact-input {
   .copyright,
   .footer-list { margin-inline: 0; }
 
+}
+
+/* Modal stillerini dosyanın sonuna ekleyin */
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--independence);
+  margin: 5% auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 800px;
+  border-radius: var(--radius-15);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: modalopen 0.5s;
+  color: var(--white);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@keyframes modalopen {
+  from {opacity: 0; transform: translateY(-50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--orange-soda);
+  text-decoration: none;
+}
+
+.terms-section {
+  margin-bottom: 20px;
+}
+
+.terms-section h3 {
+  color: var(--gold-web-golden);
+  margin-bottom: 10px;
 }

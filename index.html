@@ -10,7 +10,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/svg/hong-kong.svg" type="image/svg+xml" style="color: red;">
+  <link rel="shortcut icon" href="./assets/svg/favicon.svg" type="image/svg+xml" >
 
   <!-- 
     - custom css link
@@ -285,12 +285,11 @@
             </li>
             
             <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-2.jpg')">
+              <a href="pages/encryption-application.html" class="portfolio-card" style="background-image: url('./assets/images/encryption.jpeg')">
                 <div class="card-content">
 
-                  <p class="card-subtitle">Vimeo</p>
+                  <p class="card-subtitle">Encryption Application</p>
 
-                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
 
                   <span class="btn-link">
                     <span>View Project</span>
@@ -321,12 +320,11 @@
            
 
             <li>
-              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-4.jpg')">
+              <a href="pages/std-esp-env.html" class="portfolio-card" style="background-image: url('./assets/images/std-esp-env.jpeg')">
                 <div class="card-content">
 
-                  <p class="card-subtitle">Details</p>
+                  <p class="card-subtitle">Standard ESP Enviroment</p>
 
-                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
 
                   <span class="btn-link">
                     <span>View Project</span>
@@ -460,16 +458,11 @@
 
             <div class="wrapper">
 
-              <form action="" class="contact-form">
-
-                <input type="text" name="name" placeholder="Name" required class="contact-input">
-
-                <input type="email" name="email" placeholder="Email" required class="contact-input">
-
-                <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
-
+              <form id="contactForm" class="contact-form" onsubmit="sendEmail(event)">
+                <input type="text" name="name" id="name" placeholder="Name" required class="contact-input">
+                <input type="email" name="email" id="email" placeholder="Email" required class="contact-input">
+                <textarea name="message" id="message" placeholder="Message" required class="contact-input"></textarea>
                 <button type="submit" class="btn-submit">Submit Message</button>
-
               </form>
 
               <ul class="contact-list">
@@ -641,14 +634,13 @@
       <p class="copyright">
         &copy; 2025 <a href="#" class="copyright-link">Dağ</a>. All Rights Reseverd
       </p>
-
       <ul class="footer-list">
         <li>
-          <a href="#" class="footer-link">Terms & Condition</a>
+          <a href="#" class="footer-link" id="termsLink">Terms & Condition</a>
         </li>
-
+      
         <li>
-          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link" id="privacyLink">Privacy Policy</a>
         </li>
       </ul>
 
@@ -679,6 +671,96 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Terms & Conditions Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Terms and Conditions</h2>
+      <p>Last Updated: May 10, 2025</p>
+      
+      <div class="terms-section">
+        <h3>1. Introduction</h3>
+        <p>Welcome to the portfolio website of Mustafa Dağ BİÇER. These Terms and Conditions govern your use of this website. By accessing and using this website, you agree to be bound by these Terms and Conditions.</p>
+      </div>
+      
+      <div class="terms-section">
+        <h3>2. Intellectual Property Rights</h3>
+        <p>Unless otherwise stated, all content on this website including text, graphics, logos, images, audio clips, digital downloads, data compilations, and software is the property of Mustafa Dağ BİÇER or his content suppliers and is protected by international copyright laws.</p>
+      </div>
+      
+      <!-- Diğer bölümler... -->
+      
+      <div class="terms-section">
+        <h3>3. Contact Information</h3>
+        <p>If you have any questions or concerns about these Terms and Conditions, please contact Mustafa Dağ BİÇER at <a href="mailto:mustafa.bicer1@ogr.sakarya.edu.tr">mustafa.bicer1@ogr.sakarya.edu.tr</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal-privacy">&times;</span>
+      <h2>Privacy Policy</h2>
+      <p>Last Updated: May 10, 2025</p>
+      
+      <div class="terms-section">
+        <h3>1. Introduction</h3>
+        <p>This Privacy Policy describes how this portfolio website operates with respect to privacy and data collection.</p>
+      </div>
+      
+      <div class="terms-section">
+        <h3>2. No Data Collection Policy</h3>
+        <p>This website does not collect any personal information from visitors. We do not:</p>
+        <ul>
+          <li>Use cookies or similar tracking technologies</li>
+          <li>Collect IP addresses or browser information</li>
+          <li>Track user behavior or interactions with the site</li>
+          <li>Store any personal identifiers or user data</li>
+          <li>Share any information with third parties (as no information is collected)</li>
+        </ul>
+      </div>
+
+      <div class="terms-section">
+        <h3>3. Contact Form</h3>
+        <p>If you choose to use the contact form on this website:</p>
+        <ul>
+          <li>The information you provide (name, email, and message) is only used to respond to your inquiry</li>
+          <li>This information is not stored in a database or used for any marketing purposes</li>
+          <li>Your contact information is not shared with any third parties</li>
+        </ul>
+      </div>
+      
+      <div class="terms-section">
+        <h3>4. External Links</h3>
+        <p>This website may contain links to external sites. We are not responsible for the privacy practices or content of these other websites. Please review the privacy policies of any external sites you visit.</p>
+      </div>
+      
+      <div class="terms-section">
+        <h3>5. Changes to This Policy</h3>
+        <p>Any changes to this privacy policy will be posted on this page.</p>
+      </div>
+      
+      <div class="terms-section">
+        <h3>6. Contact Information</h3>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact Mustafa Dağ BİÇER at <a href="mailto:mustafa.bicer1@ogr.sakarya.edu.tr">mustafa.bicer1@ogr.sakarya.edu.tr</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function sendEmail(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      const mailtoLink = `mailto:mustafa.bicer1@ogr.sakarya.edu.tr?subject=Contact Form Submission from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      
+      window.location.href = mailtoLink;
+    }
+  </script>
 
 </body>
 

@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const indicator = document.querySelector('.stack-indicator');
     let cards = Array.from(stack.children);
     let zBase = 10;
+    let currentIndex = 0;
 
     function updateStack() {
       cards = Array.from(stack.children);
@@ -150,8 +151,11 @@ document.addEventListener('DOMContentLoaded', function () {
         indicator.innerHTML = '';
         cards.forEach((_, i) => {
           const dot = document.createElement('span');
-          if (i === 0) dot.classList.add('active');
           indicator.appendChild(dot);
+        });
+        const allDots = indicator.querySelectorAll('span');
+        allDots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
         });
       }
       attachCardEvents();
@@ -204,6 +208,12 @@ document.addEventListener('DOMContentLoaded', function () {
         card.style.transition = 'none';
         card.style.transform = '';
         stack.appendChild(card); // Sonsuz döngü için kartı sona taşı
+        // Güncel indexi güncelle
+        if (dir > 0) {
+          currentIndex = (currentIndex + 1) % cards.length;
+        } else {
+          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        }
         updateStack();
       }, 350);
     }

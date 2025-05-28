@@ -570,6 +570,13 @@ body {
   font-size: 1.6rem;
 }
 
+.stack-card[data-index="1"] .card-tag,
+.stack-card[data-index="1"] .card-title,
+.stack-card[data-index="2"] .card-tag,
+.stack-card[data-index="2"] .card-title {
+  display: none;
+}
+
 
 
 
@@ -1520,16 +1527,11 @@ textarea.contact-input {
   pointer-events: auto;
 }
 
-.stack-card[data-index="1"] {
-  z-index: 2;
-  transform: scale(0.95) translateY(20px);
-  filter: blur(1px) brightness(0.95);
-}
-
+.stack-card[data-index="1"],
 .stack-card[data-index="2"] {
-  z-index: 1;
-  transform: scale(0.9) translateY(40px);
-  filter: blur(2px) brightness(0.9);
+  opacity: 0;
+  pointer-events: none;
+  filter: none;
 }
 
 .stack-card.removed {

@@ -1,0 +1,28 @@
+/* 
+ * MAIN CSS FILE
+ * Imports all CSS components
+ */
+
+/* Import base styles - variables, reset, and base elements */
+@import url('base.css');
+
+/* Import component styles - buttons, cards, etc. */
+@import url('components.css');
+
+/* Import layout styles - header, footer, etc. */
+@import url('layout.css');
+
+/* Import section styles - hero, about, portfolio, etc. */
+@import url('sections.css');
+
+/* Import card stack component styles */
+@import url('card-stack.css');
+
+/* Import custom cursor styles */
+@import url('cursor.css');
+
+/* Import responsive styles - media queries */
+@import url('responsive.css');
+
+/* Import project page styles */
+@import url('project-page.css');

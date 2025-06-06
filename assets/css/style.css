@@ -4,6 +4,18 @@
 
 /**
  * copyright 2022 codewithsadee
+ * 
+ * !! DEPRECATED !!
+ * This file is no longer actively used. The CSS has been split into modular files:
+ * - base.css: Variables, reset, and base styles
+ * - components.css: Reusable components
+ * - layout.css: Layout structures
+ * - sections.css: Individual page sections
+ * - card-stack.css: Card stack component
+ * - cursor.css: Custom cursor
+ * - responsive.css: Media queries
+ * 
+ * Please use main.css which imports all the above files.
  */
 
 

@@ -1,0 +1,103 @@
+/* 
+ * CARD STACK STYLES
+ * Contains styles for card stack component 
+ */
+
+/* Card Stack Styles */
+.card-stack-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 60px auto;
+    position: relative;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.card-stack {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+.stack-card {
+    position: absolute;
+    width: 100%;
+    height: 420px;
+    left: 0;
+    top: 0;
+    cursor: none !important;
+    transition: transform 0.35s cubic-bezier(.4, 2, .6, 1), opacity 0.3s;
+    will-change: transform, opacity;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.stack-card[data-index="0"] {
+    z-index: 3;
+    pointer-events: auto;
+}
+
+.stack-card[data-index="1"],
+.stack-card[data-index="2"] {
+    opacity: 0;
+    pointer-events: none;
+    filter: none;
+}
+
+.stack-card.removed {
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(.4, 2, .6, 1), opacity 0.3s;
+}
+
+.stack-indicator {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.stack-indicator span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--manatee);
+    opacity: 0.5;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.stack-indicator span.active {
+    background: var(--bluetiful);
+    opacity: 1;
+}
+
+.stack-card>* {
+    pointer-events: none;
+    cursor: none !important;
+}
+
+/* Ensure all elements in card stack have cursor: none */
+.card-stack *,
+.card-stack-container *,
+.stack-card,
+.stack-indicator span {
+    cursor: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .card-stack-container {
+        max-width: 98vw;
+        height: 340px;
+    }
+
+    .stack-card {
+        height: 280px;
+    }
+}

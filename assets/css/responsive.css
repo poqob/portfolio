@@ -1,0 +1,416 @@
+/* 
+ * RESPONSIVE STYLES
+ * Contains all media queries 
+ */
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 600px screen
+ */
+
+@media (min-width: 600px) {
+
+    /**
+   * PORTFOLIO
+   */
+
+    /* .portfolio-list li:nth-child(even) .card-content { margin-inline-start: 50%; } */
+
+}
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+    /**
+   * PORTFOLIO
+   */
+
+    .portfolio-card {
+        background-size: 115%;
+        padding-inline: 80px;
+    }
+
+    .portfolio-card:is(:hover, :focus) {
+        background-size: 130%;
+    }
+
+    /**
+   * SKILLS, BLOG
+   */
+
+    .skills-list,
+    .blog-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+    }
+
+    /* Blog carousel for tablets */
+    .carousel-container {
+        max-width: 1050px;
+        margin-inline: auto;
+    }
+
+    .carousel-wrapper {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-slides {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+    }
+
+    .carousel-slide {
+        min-width: 33.333%;
+        transition: all 0.5s ease;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+    /**
+   * CUSTOM PROPERTY
+   */
+
+    :root {
+
+        /**
+     * typography
+     */
+
+        --fs-1: 6.4rem;
+        --fs-2: 3.5rem;
+        --fs-3: 3.6rem;
+
+        /**
+     * spacing
+     */
+
+        --section-padding: 80px;
+
+    }
+
+    /**
+   * REUSED STYLE
+   */
+
+    .container {
+        max-width: 1400px;
+        /* Larger max-width for wider screens */
+        margin-inline: auto;
+        width: 100%;
+        position: relative;
+        padding-inline: 20px;
+        overflow: initial;
+        /* overflow: visible kaldırıldı, overflow: initial olarak düzeltildi */
+    }
+
+    /**
+   * HEADER
+   */
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .header,
+    .header.nav-active {
+        background-color: transparent;
+        box-shadow: none;
+        height: unset;
+        padding-block: 30px;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .header.active {
+        background-color: var(--space-cadet);
+        box-shadow: var(--shadow);
+        padding-block: 20px;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar {
+        all: unset;
+    }
+
+    .navbar-list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navbar .btn {
+        margin-block-start: 0;
+        --padding: 7px 30px;
+    }
+
+    /**
+   * HERO
+   */
+
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .btn-group {
+        justify-content: flex-start;
+    }
+
+    .hero-title span {
+        font-size: 3rem;
+    }
+
+    .hero-title {
+        --fs-5: 2.2rem;
+        margin-block-end: 25px;
+    }
+
+    .hero-text {
+        margin-block-end: 25px;
+        font-size: var(--fs-5);
+    }
+
+    .hero-banner {
+        position: relative;
+        margin-block-end: 0;
+        order: 1;
+        width: 340px;
+        height: 390px;
+        margin-inline: 0;
+        margin-inline-start: auto;
+        overflow: visible;
+        /* Taşan içeriklerin görünmesi için */
+    }
+
+    .elem {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--white);
+        border-radius: var(--radius-10);
+        padding: 20px;
+        z-index: 2;
+        /* Öğelerin üstte görünmesi için z-index eklendi */
+    }
+
+    .elem-1 {
+        top: 20px;
+        left: -130px;
+    }
+
+    .elem-1 .elem-title {
+        color: var(--vivid-sky-blue);
+    }
+
+    .elem-2 {
+        bottom: 30px;
+        right: -80px;
+    }
+
+    .elem-2 .elem-title {
+        color: var(--fiery-rose);
+    }
+
+    .elem-title {
+        font-size: 4.5rem;
+        line-height: 1.1;
+    }
+
+    .elem-text {
+        max-width: 10ch;
+        color: var(--black);
+        font-weight: var(--fw-700);
+        line-height: 1.1;
+    }
+
+    .elem-3 {
+        top: -40px;
+        right: -30px;
+    }
+
+    .elem-3 ion-icon {
+        color: var(--minion-yellow);
+        font-size: 6rem;
+    }
+
+    .rotate-img {
+        display: block;
+        position: absolute;
+        bottom: -60px;
+        left: -60px;
+        width: 120px;
+        animation: rotate360 15s linear infinite reverse;
+    }
+
+    /**
+   * ABOUT
+   */
+
+    .about {
+        padding-block: 180px;
+        overflow: visible;
+        /* Taşan içeriklerin görünmesi için */
+    }
+
+    .about .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 80px;
+        overflow: visible;
+        /* Taşan içeriklerin görünmesi için */
+    }
+
+    .about-banner {
+        position: relative;
+        margin-block-end: 0;
+        overflow: visible;
+        /* Taşan içeriklerin görünmesi için */
+    }
+
+    .abs-img {
+        width: 250px;
+        height: 250px;
+        bottom: -150px;
+        left: -100px;
+    }
+
+    .abs-icon {
+        font-size: 5rem;
+        padding: 20px;
+    }
+
+    .abs-icon-1 {
+        top: 50px;
+        left: -120px;
+    }
+
+    .abs-icon-2 {
+        top: -40px;
+        right: -40px;
+    }
+
+    .abs-icon-3 {
+        bottom: -40px;
+        left: 250px;
+    }
+
+    /**
+   * PORTFOLIO
+   */
+
+    .portfolio-card .card-subtitle {
+        font-size: var(--fs-5);
+    }
+
+    .portfolio-card .btn-link {
+        --fs-6: 1.6rem;
+    }
+
+    /**
+   * SKILLS
+   */
+
+    .skills-list {
+        column-gap: 100px;
+    }
+
+    /**
+   * CONTACT
+   */
+
+    .contact-card {
+        padding: 100px;
+    }
+
+    .contact .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+
+    .contact-form {
+        margin-block-end: 0;
+    }
+
+    .contact-item {
+        gap: 25px;
+    }
+
+    .contact-icon {
+        padding: 30px;
+    }
+
+    /**
+   * BLOG
+   */
+
+    .blog {
+        padding-block-end: 180px;
+    }
+
+    .blog-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    /* Blog carousel for desktop */
+    .carousel-container {
+        max-width: 1050px;
+        padding: 40px 0;
+    }
+
+    .carousel-slide {
+        min-width: 33.333%;
+        margin: 0 auto;
+    }
+
+    .carousel-slide.active {
+        transform: scale(1.05);
+    }
+
+    .carousel-controls {
+        margin-top: 30px;
+    }
+
+    /**
+   * FOOTER
+   */
+
+    .footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright,
+    .footer-list {
+        margin-inline: 0;
+    }
+}

@@ -54,7 +54,6 @@
 
   --fw-600: 600;
   --fw-700: 700;
-
   /**
    * border radius
    */
@@ -166,33 +165,62 @@ body {
   overflow-x: hidden;
 }
 
-:focus-visible {
-  outline-offset: 4px;
+body,
+html,
+button,
+.btn,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+a[href],
+label,
+select,
+stack-card,
+[role="button"] {
+  cursor: none !important;
 }
 
-::-webkit-scrollbar {
-  width: 15px;
+/* Custom cursor overlay with image */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.08s cubic-bezier(.4, 2, .6, 1), filter 0.2s;
+  will-change: transform, filter;
+  display: none;
+  transform-origin: center;
+  background-image: url('../images/cursor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-::-webkit-scrollbar-track {
-  background-color: hsl(0, 0%, 95%);
+.custom-cursor.active {
+  display: block !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: hsl(0, 0%, 80%);
+.custom-cursor.click {
+  animation: cursor-click 0.3s cubic-bezier(.4, 2, .6, 1);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(0, 0%, 70%);
+@keyframes cursor-click {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  50% {
+    transform: scale(0.7) translate(-50%, -50%);
+    filter: brightness(1.2);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
 }
-
-
-
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
 
 .container {
   padding-inline: 20px;

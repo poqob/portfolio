@@ -493,3 +493,20 @@ textarea.contact-input {
 .blog-card .card-title a:is(:hover, :focus) {
     color: var(--orange-soda);
 }
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.footer {
+    background-color: var(--independence);
+    padding-block: 60px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: visible;
+    z-index: 0;
+}

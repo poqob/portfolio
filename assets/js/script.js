@@ -232,35 +232,11 @@ document.addEventListener('DOMContentLoaded', function () {
           };
         }
       });
-    }
-    updateStack();
+    } updateStack();
   })();
 
   // Remove Unsplash integration and restore static blog card stack
   // No dynamic population, just use static HTML for cards
 });
 
-// Custom cursor overlay
-(function () {
-  const cursor = document.createElement('div');
-  cursor.className = 'custom-cursor';
-  document.body.appendChild(cursor);
-
-  document.addEventListener('mousemove', function (e) {
-    cursor.classList.add('active');
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    cursor.style.transform = 'translate(-50%, -50%)';
-  });
-
-  document.addEventListener('mousedown', function (e) {
-    cursor.classList.add('click');
-    setTimeout(() => {
-      cursor.classList.remove('click');
-    }, 300); // Match animation duration
-  });
-
-  document.addEventListener('mouseleave', function () {
-    cursor.classList.remove('active');
-  });
-})();
+// Custom cursor handling moved to custom-cursor.js

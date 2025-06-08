@@ -1,9 +1,23 @@
 /**
  * Enhanced custom cursor functionality
  * This script handles all cursor interactions and ensures OS cursor is hidden
+ * Custom cursor is disabled on mobile devices
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Check if the device is mobile
+    const isMobile = () => {
+        return window.innerWidth <= 768 ||
+            navigator.maxTouchPoints > 0 ||
+            navigator.msMaxTouchPoints > 0 ||
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    };
+
+    // If it's a mobile device, don't initialize the custom cursor
+    if (isMobile()) {
+        return;
+    }
+
     // Force cursor: none on all elements that might not inherit it
     const forceNoCursor = () => {
         const elementsToFix = document.querySelectorAll('.stack-card, .stack-card *, .card-stack, .card-stack-container, .stack-indicator, .stack-indicator *');

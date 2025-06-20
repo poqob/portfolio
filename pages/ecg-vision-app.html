@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKG Vision (Mixed UI) | Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/project-page.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-container>div {
+            flex: 1 1 300px;
+            min-width: 280px;
+            max-width: 500px;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 1200px) {
+            .image-container>div {
+                min-width: 200px;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-container img {
+                max-width: 100%;
+            }
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            display: block;
+            text-shadow: 0 1px 4px #000, 0 1px 8px #222;
+            border-radius: 0;
+            padding: 4px 0;
+            background: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ECG Vision - Arrhythmia Anomaly Detection Application</h1>
+        <p>A modern Flutter application for EKG analysis and patient management for doctors</p>
+    </header>
+    <main>
+        <div class="project-container">
+            <div class="image-container">
+                <div>
+                    <img src="https://raw.githubusercontent.com/poqob/ekg-vision-app/refs/heads/main/gallery/mixed/combined_entrance.png"
+                        alt="Splash, Login & Register">
+                    <span class="image-caption">Splash, Login & Register Screens</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <div>
+                    <img src="https://raw.githubusercontent.com/poqob/ekg-vision-app/refs/heads/main/gallery/mixed/combined_scan.png"
+                        alt="Dashboard (Scanning)">
+                    <span class="image-caption">Dashboard (Scanning)</span>
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/poqob/ekg-vision-app/refs/heads/main/gallery/mixed/combined_analysis.png"
+                        alt="Analysis">
+                    <span class="image-caption">Analysis</span>
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/poqob/ekg-vision-app/refs/heads/main/gallery/mixed/combined_scan-details.png"
+                        alt="Scan Details">
+                    <span class="image-caption">Scan Details</span>
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/poqob/ekg-vision-app/refs/heads/main/gallery/mixed/combined_settings.png"
+                        alt="Settings">
+                    <span class="image-caption">Settings</span>
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/poqob/ekg-vision-app/refs/heads/main/gallery/mixed/combined_info.png"
+                        alt="Info">
+                    <span class="image-caption">Info</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <div>
+                    <img src="https://raw.githubusercontent.com/poqob/ekg-vision-app/refs/heads/main/gallery/mixed/combined_profile.png"
+                        alt="Profile">
+                    <span class="image-caption">Profile</span>
+                </div>
+            </div>
+            <div class="project-details">
+                <section>
+                    <h2>About the Project</h2>
+                    <p>This project is a thesis work focused on the implementation of the user interface for an EKG
+                        analysis and doctor authentication system. The application is developed as the frontend part of
+                        the thesis, providing a modern, user-friendly interface for doctors to securely view and analyze
+                        EKG data, manage patients, and handle sessions. The backend and the custom YOLO model for EKG
+                        analysis are developed as separate projects.</p>
+                    <ul>
+                        <li>Backend repository: <a href="https://github.com/poqob/ekg-vision-backend.git"
+                                target="_blank">ekg-vision-backend</a></li>
+                        <li>Custom YOLO model for EKG: <a href="https://github.com/poqob/yolov9-bit.git"
+                                target="_blank">yolov9-bit</a></li>
+                    </ul>
+                    <p>The backend is powered by Python Flask and the EKG analysis leverages a custom YOLO model.</p>
+                </section>
+                <section>
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Doctor registration and secure login</li>
+                        <li>Session management</li>
+                        <li>EKG scan upload and analysis</li>
+                        <li>Patient management</li>
+                        <li>Modern UI with light/dark mode</li>
+                        <li>Profile and settings management</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Technologies Used</h2>
+                    <div class="tech-stack">
+                        <span class="tech-item">Flutter</span>
+                        <span class="tech-item">Dart</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Flask</span>
+                    </div>
+                </section>
+                <div class="project-links">
+                    <a href="https://github.com/poqob/ekg-vision-app" class="btn btn-github" target="_blank">View on
+                        GitHub</a>
+                    <a href="javascript:history.back()" class="btn">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

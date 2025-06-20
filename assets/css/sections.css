@@ -179,6 +179,12 @@
     transition: var(--transition-2);
 }
 
+.portfolio-card.sepia-bg {
+    filter: sepia(0.02);
+    background-blend-mode: multiply;
+    background-color: #f4ecd8;
+}
+
 .portfolio-card .card-subtitle {
     color: var(--orange-soda);
     margin-block-end: 5px;
